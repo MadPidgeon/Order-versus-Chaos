@@ -10,3 +10,6 @@ filter.exe: filter.cc
 
 order.json: filter.exe order.txt
 	./filter.exe
+
+tree.dot: order.json decision_tree.py
+	python decision_tree.py
