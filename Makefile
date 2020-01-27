@@ -4,3 +4,9 @@ dump.exe: dump.cc
 
 order.txt chaos.txt: dump.exe
 	./dump.exe
+
+filter.exe: filter.cc
+	g++ filter.cc -o filter.exe -std=c++17
+
+order.json: filter.exe order.txt
+	./filter.exe
